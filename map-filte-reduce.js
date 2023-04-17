@@ -68,3 +68,13 @@ console.log(ages);
 
 // Find the FirstName whose age is greater than 21
 console.log(users.filter(x => x.age >21).map( x => x.firstName))
+
+// Find the FirstName whose age is greater than 21 with Reduce 
+const ages2 = users.reduce((acc, curr)=>{
+    if (curr.age > 21){
+        acc.push(curr.firstName) ;
+    }
+
+    return acc; 
+},[])
+console.log(ages2);
